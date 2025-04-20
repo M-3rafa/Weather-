@@ -11,7 +11,7 @@ const apiKey = '8f6dc3569539486995e144316251904';
 
 
  async function getdata (city='cairo') {
-  await fetch(`http://api.weatherapi.com/v1/forecast.json?key=${apiKey}&q=${city}&days=3`)
+  await fetch(`https://api.weatherapi.com/v1/forecast.json?key=${apiKey}&q=${city}&days=3`)
   .then(function(response) {
     if (!response.ok) {
       throw new Error(`HTTP error! status: ${response.status}`);
