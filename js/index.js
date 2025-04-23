@@ -50,7 +50,7 @@ function displayWeather(data) {
   const forecastDays = forecast.forecastday;
 
   let html = `
-  <div class="forecast col-lg-4 col-md-12  ">
+  <div class="forecast col-lg-4  col-12 ">
     <div class="forecast-header">
               <h6 class="day">${getDayName(location.localtime)}</h6>
               <h6 class="date">${formatDate(location.localtime)}</h6>
@@ -66,7 +66,7 @@ function displayWeather(data) {
       <div class="forecast-footer">
       <div><img src="image/icon-umberella.png" alt="">${current.humidity}%</div>
     <div><img src="image/icon-wind.png" alt=""> ${current.wind_kph} km/h</div>
-    <div><img src="image/icon-compass.png" alt=""> ${current.wind_dir} km/h</div>
+    <div><img src="image/icon-compass.png" alt=""> ${current.wind_dir} </div>
       </div>
      </div>
   `;
@@ -75,7 +75,7 @@ function displayWeather(data) {
     const day = forecastDays[i];
     console.log(day);
     html += `
-     <div class="forecast col-lg-4 col-md-12  ">
+     <div class="forecast col-lg-4   col-12 ">
     <div class="forecast-header">
         <h6 class="day">${getDayName(day.date)}</h6>
         <h6 class="date">${formatDate(day.date)}</h6>
@@ -91,7 +91,8 @@ function displayWeather(data) {
       
        <div class="forecast-footer">
       <div><img src="image/icon-umberella.png" alt="">${day.day.avghumidity}%</div>
-    <div><img src="image/icon-wind.png" alt=""> ${day.day.avgvis_km} km/h</div>
+      <div><img src="image/icon-wind.png" alt="">${day.day.avgvis_km}%</div>
+   
       </div>
       
       </div>

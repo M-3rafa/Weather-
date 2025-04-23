@@ -87,11 +87,10 @@ min-width: 90px;
 }
 .forecast-container {
   width: 100%;
-  background: #323544;
+  /* background: #323544; */
   display: flex;
   flex-wrap: wrap;
-  justify-content: space-between;
-  width: 100%;
+  justify-content: center;
   overflow: hidden;
   border-radius: 10px;
   margin-top: -150px;
@@ -105,10 +104,16 @@ min-width: 90px;
 
 
 .forecast-container .forecast:nth-child(even) {
-  background-color:#262936 ;
+  background-color:#262936 !important; ;
   .forecast-header {
       background-color: #222530 !important;
   
+    }
+}
+.forecast-container .forecast:nth-child(odd) {
+  background-color:#323544 !important; ;
+  .forecast-header {
+      background-color: #2d303d !important;
     }
 }
 
